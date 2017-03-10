@@ -23,3 +23,6 @@ set number
 " Turn on scrolling
 set mouse=a
 
+" Force Markdown highlighting on *.md files
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
