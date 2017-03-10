@@ -26,3 +26,6 @@ set mouse=a
 " Force Markdown highlighting on *.md files
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
+" Share clipboard with system
+set clipboard=unnamed
+
