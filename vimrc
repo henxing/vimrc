@@ -29,3 +29,6 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Share clipboard with system
 set clipboard=unnamed
 
+" Map F7 to format whole file
+map <F7> mzgg=G`z
+
