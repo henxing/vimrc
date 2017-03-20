@@ -30,3 +30,6 @@ set clipboard=unnamed
 " Map F7 to format whole file
 map <F7> mzgg=G`z
 
+" Turn on spellcheck
+setlocal spell spelllang=en_us
+
