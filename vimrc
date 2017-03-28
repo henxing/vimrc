@@ -18,8 +18,10 @@ set ruler
 " Show line numbers to the left of the window
 set number
 
-" Turn on scrolling
-set mouse=a
+" Turn on scrolling if its there
+if has('mouse')
+    set mouse=a
+endif
 
 " Force Markdown highlighting on *.md files
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
