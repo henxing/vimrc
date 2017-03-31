@@ -35,3 +35,9 @@ map <F7> mzgg=G`z
 " Turn on spellcheck
 setlocal spell spelllang=en_us
 
+" Remap VimSplit navigation commands
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
