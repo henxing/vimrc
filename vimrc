@@ -32,8 +32,11 @@ set clipboard=unnamed
 " Map F7 to format whole file
 map <F7> mzgg=G`z
 
-" Turn on spellcheck
+" Set spellcheck language
 setlocal spell spelllang=en_us
+
+" Turn off spellcheck by default
+set nospell
 
 " Remap VimSplit navigation commands
 nnoremap <C-J> <C-W><C-J>
