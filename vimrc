@@ -1,3 +1,9 @@
+" Add pathogen to runtime
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
+" Turn on pathogen
+execute pathogen#infect()
+
 " show existing tab with 4 spaces width
 filetype plugin indent on
 
