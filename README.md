@@ -1,5 +1,5 @@
 # vimrc
-My .vimrc file, so I don't have to copy and paste changes between systems.
+My .vim folder, so I don't have to copy and paste changes between systems.
 
 # Installation
 Follow below
