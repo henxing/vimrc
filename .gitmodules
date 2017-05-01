@@ -4,9 +4,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "bundle/aldmeris"]
-	path = bundle/aldmeris
-	url = git://github.com/veloce/vim-aldmeris.git
 [submodule "bundle/vim-searchindex"]
 	path = bundle/vim-searchindex
 	url = https://github.com/google/vim-searchindex
