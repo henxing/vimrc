@@ -7,3 +7,6 @@
 [submodule "bundle/vim-searchindex"]
 	path = bundle/vim-searchindex
 	url = https://github.com/google/vim-searchindex
+[submodule "bundle/vim-tmux"]
+	path = bundle/vim-tmux
+	url = git://github.com/tmux-plugins/vim-tmux.git
