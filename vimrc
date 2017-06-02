@@ -6,6 +6,7 @@ execute pathogen#infect()
 
 " show existing tab with 4 spaces width
 filetype plugin indent on
+filetype plugin on
 
 " when indenting, use 4 spaces width
 set softtabstop=4
