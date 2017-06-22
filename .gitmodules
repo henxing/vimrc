@@ -9,7 +9,7 @@
 	url = https://github.com/google/vim-searchindex
 [submodule "bundle/vim-tmux"]
 	path = bundle/vim-tmux
-	url = git://github.com/tmux-plugins/vim-tmux.git
+	url = https://github.com/tmux-plugins/vim-tmux.git
 [submodule "bundle/csv.vim"]
 	path = bundle/csv.vim
 	url = https://github.com/chrisbra/csv.vim.git
