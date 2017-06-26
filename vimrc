@@ -6,6 +6,7 @@ execute pathogen#infect()
 
 " Set theme to aldmeris
 colorscheme aldmeris
+let g:aldmeris_transparent = 1
 
 " show existing tab with 4 spaces width
 filetype plugin indent on
