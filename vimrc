@@ -4,6 +4,9 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Turn on pathogen
 execute pathogen#infect()
 
+" Set theme to aldmeris
+colorscheme aldmeris
+
 " show existing tab with 4 spaces width
 filetype plugin indent on
 filetype plugin on
