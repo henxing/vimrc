@@ -29,6 +29,9 @@ set ruler
 " Show line numbers to the left of the window
 set number
 
+" Turn on cursorline highlighting
+set cursorline
+
 " Turn on scrolling if its there
 if has('mouse')
     set mouse=a
