@@ -8,6 +8,11 @@ execute pathogen#infect()
 colorscheme aldmeris
 let g:aldmeris_transparent = 1
 
+" first thing is entering vim mode, not plain vi
+set nocompatible
+" force 256 colors on the terminal
+set t_Co=256
+
 " show existing tab with 4 spaces width
 filetype plugin indent on
 filetype plugin on
@@ -31,8 +36,9 @@ set number
 
 " Turn on cursorline highlighting
 set cursorline
+hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
 
-" Turn on scrolling if its there
+" turn on scrolling if its there
 if has('mouse')
     set mouse=a
 endif
