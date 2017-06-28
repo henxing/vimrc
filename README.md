@@ -17,6 +17,6 @@ In 7.4 and newer, Vim looks in both .vimrc and .vim/vimrc for your vimrc file.
 If you are using an old version, do this:
 
 ```bash
-$ echo "runtime vimrc" > .vimrc
+$ echo "runtime vimrc" > ~/.vimrc
 ```
 
