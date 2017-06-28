@@ -2,14 +2,14 @@
 My .vim folder, so I don't have to copy and paste changes between systems.
 
 # Installation
-Follow below
+Run the following commands, making sure no errors show up in the output
 
 ```bash
 $ git clone https://github.com/henxing/vimrc.git ~/.vim
-Cloning into '.vim'...
-remote: Counting objects: 37, done.
-remote: Total 37 (delta 0), reused 0 (delta 0), pack-reused 37
-Unpacking objects: 100% (37/37), done.
+$ cd ~/.vim/bundle
+$ git submodule init
+$ git submodule update
+$ cd -
 ```
 
 ## For versions of Vim older than 7.4
