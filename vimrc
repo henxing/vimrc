@@ -8,6 +8,10 @@ execute pathogen#infect()
 colorscheme aldmeris
 let g:aldmeris_transparent = 1
 
+" python-syntax options
+let python_highlight_all = 1
+let python_version_2 = 1
+
 " first thing is entering vim mode, not plain vi
 set nocompatible
 " force 256 colors on the terminal
