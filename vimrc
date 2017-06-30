@@ -4,6 +4,9 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 " Turn on pathogen
 execute pathogen#infect()
 
+" force 256 colors on the terminal
+set t_Co=256
+
 " Set theme to aldmeris
 colorscheme aldmeris
 let g:aldmeris_transparent = 1
@@ -14,8 +17,9 @@ let python_version_2 = 1
 
 " first thing is entering vim mode, not plain vi
 set nocompatible
-" force 256 colors on the terminal
-set t_Co=256
+
+" Map \s to replace word under cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " show existing tab with 4 spaces width
 filetype plugin indent on
