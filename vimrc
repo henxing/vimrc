@@ -15,8 +15,18 @@ let g:aldmeris_transparent = 1
 let python_highlight_all = 1
 let python_version_2 = 1
 
-" first thing is entering vim mode, not plain vi
+" Entering vim mode
 set nocompatible
+
+" Keep statusline visible
+set laststatus=2
+
+" Build statusline
+set statusline=%f                           " Path to the file
+set statusline+=\ -\                        " Separator
+set statusline+=FileType:                   " Label
+set statusline+=%y                          " Filetype of the file
+set statusline+=%{fugitive#statusline()}    " Current branch in git repo
 
 " Map \s to replace word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
@@ -53,6 +63,9 @@ endif
 
 " Force Markdown highlighting on *.md files
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" Disable markdown folding by default
+let g:vim_markdown_folding_disabled = 1
 
 " Indentation settings for json files
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
