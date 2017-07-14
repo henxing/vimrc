@@ -28,3 +28,6 @@
 [submodule "bundle/python-syntax"]
 	path = bundle/python-syntax
 	url = https://github.com/hdima/python-syntax.git
+[submodule "bundle/vim-uncrustify"]
+	path = bundle/vim-uncrustify
+	url = https://github.com/cofyc/vim-uncrustify.git
