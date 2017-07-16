@@ -27,6 +27,7 @@ set statusline+=\ -\                        " Separator
 set statusline+=FileType:                   " Label
 set statusline+=%y                          " Filetype of the file
 set statusline+=%{fugitive#statusline()}    " Current branch in git repo
+set statusline+=, col:\ %c                  " Column number of cursor
 
 " Map \s to replace word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
