@@ -46,6 +46,7 @@ syntax on
 
 " Turn on search result highlighting
 set hlsearch
+set incsearch
 
 " Turn on row,col location of cursor
 set ruler
