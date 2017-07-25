@@ -54,10 +54,6 @@ set ruler
 " Show line numbers to the left of the window
 set number
 
-" Turn on cursorline highlighting
-set cursorline
-hi CursorLine   cterm=NONE ctermbg=234 ctermfg=NONE
-
 " turn on scrolling if its there
 if has('mouse')
     set mouse=a
@@ -93,6 +89,16 @@ nnoremap <C-H> <C-W><C-H>
 " Set VimSplit new open location
 set splitbelow
 set splitright
+
+" Tab navigation commands
+nnoremap th  :tabfirst<CR>
+nnoremap tj  :tabnext<CR>
+nnoremap tk  :tabprev<CR>
+nnoremap tl  :tablast<CR>
+nnoremap tt  :tabedit<Space>
+nnoremap tn  :tabnext<Space>
+nnoremap tm  :tabm<Space>
+nnoremap td  :tabclose<CR>
 
 " Remove octal formatting from number formats
 set nrformats-=octal
