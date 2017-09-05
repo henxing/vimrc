@@ -74,6 +74,9 @@ set clipboard=unnamed
 " Map F7 to format whole file
 map <F7> mzgg=G`z
 
+" Map F5 to format current paragraph
+map <F5> mz{V}gq`z
+
 " Set spellcheck language
 setlocal spell spelllang=en_us
 
