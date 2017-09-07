@@ -31,3 +31,6 @@
 [submodule "bundle/vim-uncrustify"]
 	path = bundle/vim-uncrustify
 	url = https://github.com/cofyc/vim-uncrustify.git
+[submodule "bundle/DoxygenToolkit.vim"]
+	path = bundle/DoxygenToolkit.vim
+	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
