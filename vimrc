@@ -68,6 +68,9 @@ let g:vim_markdown_folding_disabled = 1
 " Indentation settings for json files
 autocmd FileType json setlocal shiftwidth=2 tabstop=2
 
+" Turn on spell check for markdown files
+autocmd FileType markdown setlocal spell
+
 " Share clipboard with system
 set clipboard=unnamed
 
