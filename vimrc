@@ -32,6 +32,9 @@ set statusline+=\ %l\:%c                    " Column number of cursor
 " Map \s to replace word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
+" Remap ] to open tag in new vertical split
+noremap ] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
 " show existing tab with 4 spaces width
 filetype plugin indent on
 filetype plugin on
