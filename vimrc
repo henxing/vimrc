@@ -10,6 +10,11 @@ set t_Co=256
 " Set theme to aldmeris
 colorscheme aldmeris
 let g:aldmeris_transparent = 1
+set background=dark
+
+" Set indent guide colors
+hi IndentGuidesOdd  ctermbg=202
+hi IndentGuidesEven ctermbg=darkgrey
 
 " python-syntax options
 let python_highlight_all = 1
