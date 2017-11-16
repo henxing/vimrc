@@ -52,3 +52,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-sensible"]
+	path = bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
