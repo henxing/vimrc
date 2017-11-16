@@ -11,11 +11,13 @@ set t_Co=256
 colorscheme aldmeris
 let g:aldmeris_transparent = 1
 
-" Set indent guide colors
-let g:indent_guides_auto_colors = 0
+" Set up indent guides
+let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size  = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
+let g:indent_guides_start_level  = 2
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
 
 " python-syntax options
 let python_highlight_all = 1
