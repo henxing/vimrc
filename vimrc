@@ -10,11 +10,12 @@ set t_Co=256
 " Set theme to aldmeris
 colorscheme aldmeris
 let g:aldmeris_transparent = 1
-set background=dark
 
 " Set indent guide colors
-hi IndentGuidesOdd  ctermbg=202
-hi IndentGuidesEven ctermbg=darkgrey
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size  = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=234
 
 " python-syntax options
 let python_highlight_all = 1
