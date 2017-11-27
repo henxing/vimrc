@@ -43,6 +43,9 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 " Remap \] to open tag in new vertical split
 noremap <Leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
+" Map \d to delete trailing white space
+noremap <silent> <Leader>d :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
 " show existing tab with 4 spaces width
 filetype plugin indent on
 filetype plugin on
