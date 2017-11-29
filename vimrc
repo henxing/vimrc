@@ -110,6 +110,9 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+" Automatically resize splits on window size change
+autocmd VimResized * wincmd =
+
 " Tab navigation commands
 nnoremap th  :tabfirst<CR>
 nnoremap tj  :tabnext<CR>
