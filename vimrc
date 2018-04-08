@@ -56,6 +56,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+set scrolloff=5
 syntax on
 
 " Turn on search result highlighting
