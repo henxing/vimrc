@@ -21,7 +21,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
 
 " python-syntax options
 let python_highlight_all = 1
-let python_version_2 = 1
+let python_version_2 = 0
 
 " Entering vim mode
 set nocompatible
@@ -80,9 +80,6 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Disable markdown folding by default
 let g:vim_markdown_folding_disabled = 1
 
-" Indentation settings for json files
-autocmd FileType json setlocal shiftwidth=2 tabstop=2
-
 " Turn on spell check for markdown files
 autocmd FileType markdown setlocal spell
 
@@ -114,22 +111,5 @@ set splitright
 " Automatically resize splits on window size change
 autocmd VimResized * wincmd =
 
-" Tab navigation commands
-nnoremap th  :tabfirst<CR>
-nnoremap tj  :tabnext<CR>
-nnoremap tk  :tabprev<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tt  :tabedit<Space>
-nnoremap tn  :tabnext<Space>
-nnoremap tm  :tabm<Space>
-nnoremap td  :tabclose<CR>
-
 " Remove octal formatting from number formats
 set nrformats-=octal
-
-" Uncrustify mappings
-autocmd FileType c noremap <buffer> <c-f> :call Uncrustify('c')<CR>
-autocmd FileType c vnoremap <buffer> <c-f> :call RangeUncrustify('c')<CR>
-autocmd FileType cpp noremap <buffer> <c-f> :call Uncrustify('cpp')<CR>
-autocmd FileType cpp vnoremap <buffer> <c-f> :call RangeUncrustify('cpp')<CR>
-
