@@ -47,6 +47,9 @@ set autoindent
 
 set scrolloff=10
 syntax on
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+let g:airline_powerline_fonts = 1
 
 " Turn on search result highlighting
 set hlsearch
