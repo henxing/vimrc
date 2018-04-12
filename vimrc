@@ -21,21 +21,10 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
 
 " python-syntax options
 let python_highlight_all = 1
-let python_version_2 = 0
+let python_version_2 = 1
 
 " Entering vim mode
 set nocompatible
-
-" Keep statusline visible
-set laststatus=2
-
-" Build statusline
-set statusline=%f                           " Path to the file
-set statusline+=\ -\                        " Separator
-set statusline+=FileType:                   " Label
-set statusline+=%y                          " Filetype of the file
-set statusline+=%{fugitive#statusline()},\  " Current branch in git repo
-set statusline+=\ %l\:%c                    " Column number of cursor
 
 " Map \s to replace word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
@@ -56,7 +45,7 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
-set scrolloff=5
+set scrolloff=10
 syntax on
 
 " Turn on search result highlighting
