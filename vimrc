@@ -90,6 +90,9 @@ setlocal spell spelllang=en_us
 " Turn off spellcheck by default
 set nospell
 
+" Remap Pydocstring
+nmap <silent> <C-q> <Plug>(pydocstring)
+
 " Remap VimSplit navigation commands
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
