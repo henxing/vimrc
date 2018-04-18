@@ -106,12 +106,17 @@ set splitright
 " Automatically resize splits on window size change
 autocmd VimResized * wincmd =
 
+" Alias for opening vertical split with Syntastic horizontal split
+nnoremap <Leader>v :botright vnew
+
 " Remove octal formatting from number formats
 set nrformats-=octal
 
 " Syntastic settings
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_pylint_args = '--disable=W0212'
+let g:syntastic_python_pylint_args = '--disable=W0212,C0111,R0913,R0903'
+nnoremap <Leader>c :SyntasticToggleMode<CR> :w<CR>
