@@ -1,15 +1,44 @@
-" Add pathogen to runtime
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+" Automatically install vim-plug if it is missing
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Turn on pathogen
-execute pathogen#infect()
+" Begin vim-plug section
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-pathogen'
+Plug 'tpope/vim-fugitive'
+Plug 'google/vim-searchindex'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'chrisbra/csv.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'hdima/python-syntax'
+Plug 'cofyc/vim-uncrustify'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'tell-k/vim-autopep8'
+Plug 'craigemery/vim-autotag'
+Plug 'fidian/hexmode'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'heavenshell/vim-pydocstring'
+Plug 'w0rp/ale'
+Plug 'altercation/vim-colors-solarized'
+call plug#end()
+" End vim-plug section
 
-" force 256 colors on the terminal
-set t_Co=256
+" force 16 colors on the terminal
+set t_Co=16
 
-" Set theme to aldmeris
-colorscheme aldmeris
-let g:aldmeris_transparent = 1
+" Set theme to solarized
+set background=dark
+colorscheme solarized
 
 " Set up indent guides
 let g:indent_guides_enable_on_vim_startup = 1
@@ -35,11 +64,11 @@ noremap <Leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " Map \d to delete trailing white space
 noremap <silent> <Leader>d :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
-" show existing tab with 4 spaces width
-filetype plugin indent on
-filetype plugin on
+" Map \r to source vimrc
+noremap <Leader>r :source ~/.vim/vimrc<CR>
 
 " when indenting, use 4 spaces width
+filetype plugin on
 set softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -116,7 +145,7 @@ set nrformats-=octal
 nnoremap <Leader>c :ALEToggle<CR>
 
 " Automatic highlighting of words under the cursor
-autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match DiffAdd /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
+autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match Question /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
 let HlUnderCursor=1
 
 " Alias commonly mistyped commands
