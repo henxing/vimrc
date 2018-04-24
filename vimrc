@@ -112,11 +112,20 @@ nnoremap <Leader>v :botright vnew
 " Remove octal formatting from number formats
 set nrformats-=octal
 
-" Syntastic settings
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_pylint_args = '--disable=W0212,C0111,R0913,R0903'
-nnoremap <Leader>c :SyntasticToggleMode<CR> :w<CR>
+" ALE settings
+nnoremap <Leader>c :ALEToggle<CR>
+
+" Automatic highlighting of words under the cursor
+autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match DiffAdd /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
+let HlUnderCursor=1
+
+" Alias commonly mistyped commands
+fun! SetupCommandAlias(from, to)
+    exec 'cnoreabbrev <expr> '.a:from
+                \ .' ((getcmdtype() is# ":" && getcmdline() is# "'.a:from.'")'
+                \ .'? ("'.a:to.'") : ("'.a:from.'"))'
+endfun
+
+call SetupCommandAlias("W", "w")
+call SetupCommandAlias("Q", "q")
+call SetupCommandAlias("X", "x")
