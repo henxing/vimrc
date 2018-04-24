@@ -6,9 +6,11 @@ Run the following commands, making sure no errors show up in the output
 
 ```bash
 $ git clone https://github.com/henxing/vimrc.git ~/.vim
-$ cd ~/.vim
-$ vim vimrc
+$ vim ~/.vim/vimrc
 # Wait for vim-plug to install all plugins
+$ cd ~/.vim/vimrc/YouCompleteMe
+$ ./install.sh --clang-complete
+# Wait for YouCompleteMe to compile
 $ cd -
 ```
 
