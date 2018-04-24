@@ -33,8 +33,8 @@ Plug 'altercation/vim-colors-solarized'
 call plug#end()
 " End vim-plug section
 
-" force 256 colors on the terminal
-set t_Co=256
+" force 16 colors on the terminal
+set t_Co=16
 
 " Set theme to solarized
 set background=dark
