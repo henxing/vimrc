@@ -6,9 +6,9 @@ Run the following commands, making sure no errors show up in the output
 
 ```bash
 $ git clone https://github.com/henxing/vimrc.git ~/.vim
-$ cd ~/.vim/bundle
-$ git submodule init
-$ git submodule update
+$ cd ~/.vim
+$ vim vimrc
+# Wait for vim-plug to install all plugins
 $ cd -
 ```
 
