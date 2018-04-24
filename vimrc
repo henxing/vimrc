@@ -1,8 +1,34 @@
-" Add pathogen to runtime
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" Turn on pathogen
-execute pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-pathogen'
+Plug 'tpope/vim-fugitive'
+Plug 'google/vim-searchindex'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'chrisbra/csv.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'veloce/vim-aldmeris'
+Plug 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'hdima/python-syntax'
+Plug 'cofyc/vim-uncrustify'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'tell-k/vim-autopep8'
+Plug 'craigemery/vim-autotag'
+Plug 'fidian/hexmode'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'heavenshell/vim-pydocstring'
+Plug 'w0rp/ale'
+call plug#end()
 
 " force 256 colors on the terminal
 set t_Co=256
@@ -34,6 +60,9 @@ noremap <Leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Map \d to delete trailing white space
 noremap <silent> <Leader>d :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+" Map \r to source vimrc
+noremap <Leader>r :source ~/.vim/vimrc<CR>
 
 " show existing tab with 4 spaces width
 filetype plugin indent on
