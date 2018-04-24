@@ -76,8 +76,8 @@ set autoindent
 
 set scrolloff=10
 syntax on
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
+let g:airline_theme = 'solarized'
+let g:airline_solarized_bg = 'dark'
 let g:airline_powerline_fonts = 1
 
 " Turn on search result highlighting
@@ -143,10 +143,11 @@ set nrformats-=octal
 
 " ALE settings
 nnoremap <Leader>c :ALEToggle<CR>
+let g:ale_python_pylint_options = '--disable=W0212,C0111,R0913,R0903,R0902'
 
 " Automatic highlighting of words under the cursor
-autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match Question /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
-let HlUnderCursor=1
+autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match WarningMsg /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
+let HlUnderCursor = 1
 
 " Alias commonly mistyped commands
 fun! SetupCommandAlias(from, to)
