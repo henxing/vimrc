@@ -29,24 +29,32 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'heavenshell/vim-pydocstring'
 Plug 'w0rp/ale'
-Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-commentary'
+Plug 'lygaret/autohighlight.vim'
 call plug#end()
 " End vim-plug section
 
 " force 16 colors on the terminal
-set t_Co=16
+set t_Co=256
 
 " Set theme to solarized
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 " Set up indent guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=234
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=8
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=6
+
+" Display line at 80 chars
+highlight ColorColumn ctermbg=160 guibg=#D80000
+set colorcolumn=80
 
 " python-syntax options
 let python_highlight_all = 1
@@ -62,7 +70,8 @@ nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 noremap <Leader>] :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Map \d to delete trailing white space
-noremap <silent> <Leader>d :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+noremap <silent> <Leader>d :let _s=@/ <Bar> :%s/\s\+$//e <Bar>
+            \ :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
 
 " Map \r to source vimrc
 noremap <Leader>r :source ~/.vim/vimrc<CR>
@@ -141,13 +150,15 @@ nnoremap <Leader>v :botright vnew
 " Remove octal formatting from number formats
 set nrformats-=octal
 
+" Add mapping to <C-s> for increment
+nnoremap <C-s> <C-a>
+
 " ALE settings
 nnoremap <Leader>c :ALEToggle<CR>
 let g:ale_python_pylint_options = '--disable=W0212,C0111,R0913,R0903,R0902'
 
 " Automatic highlighting of words under the cursor
-autocmd CursorMoved * exe exists("HlUnderCursor")?HlUnderCursor?printf('match WarningMsg /\V\<%s\>/', escape(expand('<cword>'), '/\')):'match none':""
-let HlUnderCursor = 1
+set updatetime=500 " milliseconds
 
 " Alias commonly mistyped commands
 fun! SetupCommandAlias(from, to)
