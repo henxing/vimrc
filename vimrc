@@ -7,7 +7,6 @@ endif
 
 " Begin vim-plug section
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-pathogen'
 Plug 'tpope/vim-fugitive'
 Plug 'google/vim-searchindex'
 Plug 'tmux-plugins/vim-tmux'
@@ -50,7 +49,7 @@ let g:indent_guides_guide_size  = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=8
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=6
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=8
 
 " Display line at 80 chars
 highlight ColorColumn ctermbg=160 guibg=#D80000
