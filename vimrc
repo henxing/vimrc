@@ -78,7 +78,6 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
-set scrolloff=10
 syntax on
 let g:airline_theme = 'solarized'
 let g:airline_solarized_bg = 'dark'
