@@ -1,8 +1,8 @@
 " Automatically install vim-plug if it is missing
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " Begin vim-plug section
@@ -21,7 +21,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tell-k/vim-autopep8'
 Plug 'craigemery/vim-autotag'
 Plug 'fidian/hexmode'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
@@ -33,26 +32,23 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-commentary'
 Plug 'lygaret/autohighlight.vim'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 " End vim-plug section
 
-" force 16 colors on the terminal
-set t_Co=256
+" Set up colors
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
 
-" Set theme to solarized
+syntax enable
 set background=dark
-" colorscheme solarized
-
-" Set up indent guides
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_guide_size  = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=8
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=8
+colorscheme solarized8
 
 " Display line at 80 chars
-highlight ColorColumn ctermbg=160 guibg=#D80000
+highlight ColorColumn ctermbg=grey
 set colorcolumn=80
 
 " python-syntax options
