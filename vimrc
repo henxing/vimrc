@@ -7,6 +7,8 @@ endif
 
 " Begin vim-plug section
 call plug#begin('~/.vim/plugged')
+" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-fugitive'
 Plug 'google/vim-searchindex'
 Plug 'tmux-plugins/vim-tmux'
