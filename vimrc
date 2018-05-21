@@ -35,6 +35,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-commentary'
 Plug 'lygaret/autohighlight.vim'
 Plug 'lifepillar/vim-solarized8'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 " End vim-plug section
 
