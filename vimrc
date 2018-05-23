@@ -23,7 +23,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tell-k/vim-autopep8'
 Plug 'craigemery/vim-autotag'
 Plug 'fidian/hexmode'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
